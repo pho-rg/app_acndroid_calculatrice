@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/screen"
+        android:text="0"
+        android:textSize="18sp"
+        android:fontFamily="monospace"
+        android:textAlignment="viewEnd"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="end"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="*"
+        android:shrinkColumns="*"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button style="@style/DigitBtnStyle"
+                android:text="7"
+                android:id="@+id/btnSept" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="8"
+                android:id="@+id/btnHuit" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="9"
+                android:id="@+id/btnNeuf" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="+"
+                android:id="@+id/btnPlus"
+                android:onClick="setOperator"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button style="@style/DigitBtnStyle"
+                android:text="4"
+                android:id="@+id/btnQuatre" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="5"
+                android:id="@+id/btnCinq" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="6"
+                android:id="@+id/btnSix" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="-"
+                android:id="@+id/btnMoins"
+                android:onClick="setOperator"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button style="@style/DigitBtnStyle"
+                android:text="1"
+                android:id="@+id/btnTrois" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="2"
+                android:id="@+id/btnDeux" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="3"
+                android:id="@+id/btnTrois" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="*"
+                android:id="@+id/btnMultiplier"
+                android:onClick="setOperator"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button style="@style/DigitBtnStyle"
+                android:text="0"
+                android:id="@+id/btnZero" />
+            <Button style="@style/DigitBtnStyle"
+                android:text="="
+                android:id="@+id/btnEgal"
+                android:layout_weight="2"/>
+            <Button style="@style/DigitBtnStyle"
+                android:text="/"
+                android:id="@+id/btnDiviser"
+                android:onClick="setOperator"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
